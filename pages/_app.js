@@ -2,16 +2,15 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
 
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css'; // Import the CSS
+config.autoAddCss = false;
+
+import CustomNavbar from '../components/navbar';
+
 export default ({ Component, pageProps, router }) => {
   return (
-    <div
-      className="bg-success d-flex justify-content-center align-items-center"
-      style={{
-        height: '100vh',
-        background:
-          'linear-gradient(98deg, rgba(182, 210, 245,1) 0%, rgba(71, 61, 204,1) 100%)',
-      }}
-    >
+    <>
       <Head>
         <link href="/styles.css" rel="stylesheet" />
         <link
@@ -25,9 +24,24 @@ export default ({ Component, pageProps, router }) => {
           crossorigin="anonymous"
         />
       </Head>
-      <AnimatePresence exitBeforeEnter>
-        <Component {...pageProps} key={router.route} />
-      </AnimatePresence>
-    </div>
+
+      <div
+        className=""
+        style={{
+          background:
+            'linear-gradient(98deg, rgba(182, 210, 245,1) 0%, rgba(71, 61, 204,1) 100%)',
+        }}
+      >
+        <CustomNavbar />
+        <div
+          className="component-container d-flex justify-content-center align-items-center"
+          style={{ minHeight: '94vh' }}
+        >
+          <AnimatePresence exitBeforeEnter>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
+        </div>
+      </div>
+    </>
   );
 };
