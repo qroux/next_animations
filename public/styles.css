@@ -5,7 +5,7 @@ h3,
 h4,
 h5,
 a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 200 !important;
   color: rgb(255, 255, 255);
 }
@@ -74,7 +74,7 @@ a:hover {
 /* Contacts */
 
 svg {
-  font-size: 4vh !important;
+  font-size: 3vh !important;
 }
 
 .contact {

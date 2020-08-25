@@ -1,51 +1,54 @@
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import Link from "next/link";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const projectsJS = [
   {
-    title: 'Cursed Twitch',
-    lang: 'React | Redux',
-    logo: '/images/logo/react-redux.png',
-    link: 'https://react-stream-client.herokuapp.com/',
-    src: '/images/portfolio/js/cursed-twitch.png',
+    title: "Cursed Twitch",
+    lang: "React | Redux",
+    logo: "/images/logo/react-redux.png",
+    link: "https://react-stream-client.herokuapp.com/",
+    src: "/images/portfolio/js/cursed-twitch.png",
   },
   {
-    title: 'Kickstarter',
-    lang: 'React | Web3',
-    logo: '/images/logo/eth-logo.png',
-    link: 'https://kickstarter-copy.herokuapp.com/',
-    src: '/images/portfolio/js/kickstarter.png',
+    title: "Kickstarter",
+    lang: "React | Web3",
+    logo: "/images/logo/eth-logo.png",
+    link: "https://kickstarter-copy.herokuapp.com/",
+    src: "/images/portfolio/js/kickstarter.png",
   },
   {
-    title: 'Cabinet',
-    lang: 'Vue | Nuxt',
-    logo: '/images/logo/vue-logo.png',
-    link: 'https://dr-roux-gilbert.chirurgiens-dentistes.fr/',
-    src: '/images/portfolio/js/nuxt-cabinet.png',
+    title: "Cabinet",
+    lang: "Vue | Nuxt",
+    logo: "/images/logo/vue-logo.png",
+    link: "https://dr-roux-gilbert.chirurgiens-dentistes.fr/",
+    src: "/images/portfolio/js/nuxt-cabinet.png",
   },
 ];
 
 const projectsRuby = [
   {
-    title: 'Notice-droit.fr',
-    lang: 'Ruby',
-    logo: '/images/portfolio/ruby/ruby-logo.png',
-    link: 'https://notice-droit.fr/',
-    src: '/images/portfolio/ruby/notice.png',
+    title: "Notice-droit.fr",
+    lang: "Ruby",
+    logo: "/images/portfolio/ruby/ruby-logo.png",
+    link: "https://notice-droit.fr/",
+    src: "/images/portfolio/ruby/notice.png",
   },
   {
-    title: 'OpenData Paris',
-    lang: 'Ruby',
-    logo: '/images/portfolio/ruby/ruby-logo.png',
-    link: 'https://trustpair-test.herokuapp.com/',
-    src: '/images/portfolio/ruby/trust.png',
+    title: "OpenData Paris",
+    lang: "Ruby",
+    logo: "/images/portfolio/ruby/ruby-logo.png",
+    link: "https://trustpair-test.herokuapp.com/",
+    src: "/images/portfolio/ruby/trust.png",
   },
   {
-    title: 'Cabinet',
-    lang: 'Sinatra',
-    logo: '/images/portfolio/ruby/sinatra-logo.png',
-    link: 'https://skello-sinatra.herokuapp.com/',
-    src: '/images/portfolio/ruby/skello.png',
+    title: "Cabinet",
+    lang: "Sinatra",
+    logo: "/images/portfolio/ruby/sinatra-logo.png",
+    link: "https://skello-sinatra.herokuapp.com/",
+    src: "/images/portfolio/ruby/skello.png",
   },
 ];
 
@@ -91,11 +94,16 @@ const renderJs = (projects) => {
             transition={{ delay: 0.2 }}
             key={project.title}
             src={project.src}
-            width={'100%'}
+            width={"100%"}
           />
           <div className="project-info text-center border-top py-2">
             <img src={project.logo} />
-            <h4 className="text-dark font-weight-bold">{project.lang}</h4>
+
+            <a href={project.link} target="blank" className="text-dark">
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+
+            {/* <h4 className="text-dark font-weight-bold">{project.lang}</h4> */}
           </div>
         </motion.div>
       ))}

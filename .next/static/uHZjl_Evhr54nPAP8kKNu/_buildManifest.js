@@ -1,1 +1,0 @@
-self.__BUILD_MANIFEST = {"/contacts":["static\u002Fchunks\u002Fa9a7754c.4e450ac392edc3eb09e6.js"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()

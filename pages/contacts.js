@@ -1,16 +1,16 @@
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import Link from "next/link";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default () => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: '-10vh' }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, x: "-5vh" }}
+      animate={{ opacity: 1, x: "0" }}
+      exit={{ opacity: 0, x: "-5vh" }}
     >
       <div className="container text-center mb-5">
         <h1>CONTACTS</h1>

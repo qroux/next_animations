@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const easing = [0.6, -0.05, 0.01, 0.99];
 
@@ -26,9 +26,9 @@ const stagger = {
 export default () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, x: "-5vh" }}
+      animate={{ opacity: 1, x: "0" }}
+      exit={{ opacity: 0, x: "-5vh" }}
     >
       <motion.div variants={stagger} className="container d-flex">
         <div className="">
@@ -60,17 +60,19 @@ export default () => {
             #212).
           </h5>
 
-          <h5 className="">
-            <strong>Maintenant</strong>
-          </h5>
-          <h5 className="pb-4">
-            Je développe en langage{' '}
-            <strong>Javascript et Ruby ( Backend/Frontend )</strong>.
-          </h5>
+          <div className="border pt-2 px-2">
+            <h5 className="">
+              <strong>Maintenant</strong>
+            </h5>
+            <h5 className="pb-1">
+              Je développe en langage{" "}
+              <strong>Javascript et Ruby ( Backend/Frontend )</strong>.
+            </h5>
+          </div>
 
-          <div className="text-right">
+          <div className="text-right py-4 pr-1">
             <Link href="/portfolio">
-              <a>suite</a>
+              <a className="">Suite</a>
             </Link>
           </div>
         </div>
