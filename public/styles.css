@@ -29,7 +29,7 @@ a {
 /* Component container */
 
 .component-container {
-  /* padding-top: 20vh; */
+  align-items: center;
 }
 
 /* Présentation */
@@ -92,5 +92,21 @@ svg {
 
   .links-container {
     margin-left: 0;
+  }
+
+  .component-container {
+    padding-top: 3vh;
+    align-items: start;
+  }
+
+  .project-container {
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+  }
+
+  .contacts-padding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

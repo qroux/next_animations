@@ -85,7 +85,7 @@ const renderJs = (projects) => {
         <motion.div
           variants={fadeInUp}
           whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          // whileTap={{ scale: 0.95 }}
           className="card project flex-md-column"
         >
           <motion.img
@@ -113,13 +113,14 @@ const renderJs = (projects) => {
 
 export default () => (
   <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
-    <div className="container px-0">
+    <div className="container">
       <motion.div
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
         className="title"
       >
         <h1>PORTFOLIO</h1>
+        <hr />
       </motion.div>
       <h2>Javascript</h2>
       {renderJs(projectsJS)}
